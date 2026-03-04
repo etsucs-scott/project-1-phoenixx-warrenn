@@ -1,43 +1,98 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/2QC0Bpz-)
-# CSCI 1260 — Project
+-- Phoenix Warren
 
-## Project Instructions
-All project requirements, grading criteria, and submission details are provided on **D2L**.  
-Refer to D2L as the *authoritative source* for this assignment.
+-- CSCI 1260-002: Object-Oriented Programming
 
-This repository is intentionally minimal. You are responsible for:
-- Creating the solution and projects
-- Designing the class structure
-- Implementing the required functionality
+-- Spring 2026
 
----
 
-## Getting Started (CLI)
 
-You may use **Visual Studio**, **VS Code**, or the **terminal**.
+This project is a simple, console-based adventure maze game built with Visual Studio's C# and .NET. The player navigates through a randomly generated maze while fighting monsters, collecting items, and attempting to reach the exit tile.
 
-### Create a solution
-```bash
-dotnet new sln -n ProjectName
-```
+This follows a layered architecture where all game rules and domain logic live inside the Core library, while the Console project handles input and output only.
 
-### Create a project (example: console app)
-```bash
-dotnet new console -n ProjectName.App
-```
 
-### Add the project to the solution
-```bash
-dotnet sln add ProjectName.App
-```
 
-### Build and run
-```bash
-dotnet build
-dotnet run --project ProjectName.App
-```
+Enjoy :))
 
-## Notes
-- Commit early and commit often.
-- Your repository history is part of your submission.
-- Update this README with build/run instructions specific to your project.
+
+
+
+
+
+
+---------------------
+
+
+
+***CONTROLS***:
+
+W/Up Arrow = Up
+
+A/Left Arrow = Left
+
+S/Down Arrow = Down
+
+D/Right Arrow = Right
+
+
+
+***DISPLAY SYMBOLS***:
+
+\# = Wall
+
+. = Empty Space
+
+@ = Player
+
+M = Monster
+
+W = Weapon
+
+P = Potion
+
+E = Exit
+
+
+
+***GAME RULES:***
+
+Player starts with 100 HP (Max HP = 150)
+
+
+
+Base damage = 10
+
+
+
+Monsters have random health between 30–50 HP
+
+
+
+Potions heal +20 HP instantly
+
+
+
+Weapons get stored in inventory \& the highest modifier adds to attack damage
+
+
+
+***BATTLE SYSTEM***:
+
+
+
+Battle is turn-based:
+
+
+
+**Player** attacks first
+
+Damage = Base Damage + Best Weapon Modifier
+
+**Monster** counterattacks if alive
+
+Battle continues until one reaches ***0 HP***
+
+**Player** death ends the game
+
+**No fleeing allowed!!!**
+
